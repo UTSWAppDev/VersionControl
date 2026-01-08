@@ -44,7 +44,7 @@ To `homework.html` add the following html:
 
 ***
 
-## **Step 3: Stage and Commit**
+## **Step 2: Stage and Commit**
 Now that you've created your project's first html file, you'll want to commit it to the repository.<br>
 Remember that you first need to stage files before you can commit them.
 
@@ -64,7 +64,7 @@ Remember, to execute git commands, use the command line in `TERMINAL`
 
 ***
 
-## **Step 4: Create a New Branch for Feature**
+## **Step 3: Create a New Branch for Feature**
 In this step, we will simulate the process to create a new branch to begin work on a new feature.<br>
 We want to work on a new branch so that we preserve the integrity of the main branch in case we make mistakes.<br>
 To create a new branch and switch to it, use 'git switch -c _nameofbranch_'<br>
@@ -84,7 +84,7 @@ In homework.html, let's begin work on the new feature. Add a new `<h2>` element 
 
 ***
 
-## **Step 5: Bug Fix Workflow**
+## **Step 4: Bug Fix Workflow**
 Here we will simulate an urgent request that needs immediate attention.<br>
 The customer calls and needs you to immediately fix a problem. They want the background color of the `<h1>` element to be blue instead of gray.<br>
 You will need to stop work on the newfeature and immediately fix the customer request.<br>
@@ -94,7 +94,7 @@ git add homework.html
 git commit -m "Added h2 element for new feature"
 ```
 
-Now switch to main and create a `bugfix` branch where you will address the customer issue:
+Now switch to `main` and create a `bugfix` branch where you will address the customer issue:
 
 ```bash
 git switch main
@@ -131,21 +131,40 @@ git merge bugfix
 ```
 ***
 
-## **Step 6: Merge New Feature**
+## **Step 5: Finish the New Feature and Merge Into Main**
 
-Switch back to `newfeature`, add `<h3>` element, commit:
+Switch back to `newfeature` branch to continue work there.<br>
+```bash
+git switch newfeature
+```
+
+Add an `<h3>` element to finish the new feature
+
+```html
+...
+<body>
+    <h1 style="background-color:grey;">Basics of git</h1>
+    <h2>Here is the new feature!</h2>
+    <h3>This is the end of the new feature</h3>
+</body>
+...
+```
+
+Commit the finalized new feature to the `newfeature` branch:
 
 ```bash
 git add homework.html
 git commit -m "Added h3 element for new feature"
 ```
 
-Merge into main:
+Merge `newfeature` into `main`:
 
 ```bash
 git switch main
 git merge newfeature
 ```
+
+Resolve conflicts.
 
 ***
 
