@@ -119,13 +119,13 @@ git commit -m "Changed h1 background color to blue"
 ```
 
 # Merge bugfix into main
-To merge a branch, first we switch into the branch we with to merge _into_.
+To merge a branch, first we switch into the branch we wish to merge _into_.
 
 ```bash
 git switch main
 ```
 
-Then we specify the name of the branch we with to merge into currently selected branch:
+Then we specify the name of the branch we wish to merge into currently selected branch:
 ```bash
 git merge bugfix
 ```
